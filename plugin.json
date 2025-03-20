@@ -9,16 +9,16 @@
 		{ "hook": "filter:parse.raw", "method": "parseRaw", "priority": 10 },
 		{ "hook": "filter:parse.post", "method": "parsePost", "priority": 10 },
 		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" },
-		{ "hook": "static:app.load", "method": "init" }		
-	],	
+		{ "hook": "static:app.load", "method": "init" }
+	],
 	"templates": "templates",
 	"scripts": [
-	"static/lib/lazyYT.js"
+		"public/lib/lazyYT.js"
 	],
-	"staticDirs": {
-        "static": "./static"
-    },
-    "less": [
-	"./static/style.less"
+	"modules": {
+		"../admin/plugins/youtube-lite.js": "public/admin.js"
+	},
+    "scss": [
+		"./public/style.scss"
 	]
 }
